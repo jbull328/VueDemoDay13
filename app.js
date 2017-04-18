@@ -8,7 +8,7 @@ new Vue({
     events: []
   },
 
-  ready: function() {
+  mounted: function() {
     this.fetchEvents();
   },
 
@@ -17,7 +17,7 @@ new Vue({
     fetchEvents: function() {
       var events = [
         {
-          id: 1,
+          id: 1,ready
           name: 'TIFF',
           description: 'Toronto International Film Festival',
           date: '2015-09-10'
@@ -37,7 +37,7 @@ new Vue({
       ];
 
       //set is vue method that pushed data onto an array.
-      this.$set('events', events);
+      this.events = events;
     },
 
     addEvent: function(){
