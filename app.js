@@ -8,36 +8,23 @@ new Vue({
     events: []
   },
 
-  mounted: function() {
-    this.fetchEvents();
-  },
+  ready: function () {
+   this.fetchEvents();
+ },
 
   methods: {
 
     fetchEvents: function() {
-      var events = [
-        {
-          id: 1,
-          name: 'Intervuew for Front-End Job',
-          description: 'In person Interview for Front-End dev position',
-          date: '2017-06-02'
-        },
-        {
-          id: 2,
-          name: 'Deploy Application',
-          description: 'Deadline for pushing production code',
-          date: '2017-06-15'
-        },
-        {
-          id: 3,
-          name: 'SXSW',
-          description: 'Music, film and interactive festival in Austin TX.',
-          date: '2017-03-11'
-        }
-      ];
-
+      var events = [];
+      this.$http.get('/api/events').success(function(events) {
+        this.$set('events', events);
+        console.log(events);
+      })
+      .error(function (err) {
+        console.log(err);
+      })
       //set is vue method that pushed data onto an array.
-      this.events = events;
+      // this.events = events;
     },
 
     addEvent: function(){
