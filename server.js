@@ -34,5 +34,6 @@ app.get('/', routes.index);
 app.all('/api/events', api.events);
 app.all('/api/events/:eventId', api.event)
 
-app.listen(8080);
-console.log('Magic happens on port 8080...');
+app.listen(process.env.PORT || 3000, function() {
+  console.log("Vue Event list Server is Running!");
+})
