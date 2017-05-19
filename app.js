@@ -18,21 +18,21 @@ new Vue({
       var events = [
         {
           id: 1,
-          name: 'TIFF',
-          description: 'Toronto International Film Festival',
-          date: '2015-09-10'
+          name: 'Intervuew for Front-End Job',
+          description: 'In person Interview for Front-End dev position',
+          date: '2017-06-02'
         },
         {
           id: 2,
-          name: 'The Martian Permiere',
-          description: 'The Martian comes to theatres.',
-          date: '2015-10-02'
+          name: 'Deploy Application',
+          description: 'Deadline for pushing production code',
+          date: '2017-06-15'
         },
         {
           id: 3,
           name: 'SXSW',
           description: 'Music, film and interactive festival in Austin TX.',
-          date: '2016-03-11'
+          date: '2017-03-11'
         }
       ];
 
